@@ -1,0 +1,20 @@
+:host {
+  --content-padding: 10px 20px 10px 10px;
+}
+header.brand-name{
+  display: block;
+  height: 60px;
+  padding: var(--content-padding);
+  box-shadow: 0px 5px 25px var(--shadow-color);
+  > a{
+    background: url('../assets/logoMarca.png') no-repeat center center; background-size: 60%; width: 100px; height: 60px; border: 1px solid #605ecc; border-radius: 15px; display: inline-block; vertical-align: middle;
+    img{ display: none;}
+  }
+  a + *{
+    display: inline-flex; width: calc(100% - 102px); justify-content: space-between; align-items: center;
+  }
+}
+
+.content {
+  padding: var(--content-padding);
+}

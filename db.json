@@ -1,0 +1,380 @@
+{
+    "locations": [
+        {
+            "id": 0,
+            "name": "Acme Fresh Start Housing",
+            "city": "Chicago",
+            "state": "IL",
+            "photo": "https://angular.dev/assets/images/tutorials/common/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+            "availableUnits": 4,
+            "wifi": true,
+            "laundry": true
+        },
+        {
+            "id": 1,
+            "name": "A113 Transitional Housing",
+            "city": "Santa Monica",
+            "state": "CA",
+            "photo": "https://angular.dev/assets/images/tutorials/common/brandon-griggs-wR11KBaB86U-unsplash.jpg",
+            "availableUnits": 0,
+            "wifi": false,
+            "laundry": true
+        },
+        {
+            "id": 2,
+            "name": "Warm Beds Housing Support",
+            "city": "Juneau",
+            "state": "AK",
+            "photo": "https://angular.dev/assets/images/tutorials/common/i-do-nothing-but-love-lAyXdl1-Wmc-unsplash.jpg",
+            "availableUnits": 1,
+            "wifi": false,
+            "laundry": false
+        },
+        {
+            "id": 3,
+            "name": "Homesteady Housing",
+            "city": "Chicago",
+            "state": "IL",
+            "photo": "https://angular.dev/assets/images/tutorials/common/ian-macdonald-W8z6aiwfi1E-unsplash.jpg",
+            "availableUnits": 1,
+            "wifi": true,
+            "laundry": false
+        },
+        {
+            "id": 4,
+            "name": "Happy Homes Group",
+            "city": "Gary",
+            "state": "IN",
+            "photo": "https://angular.dev/assets/images/tutorials/common/krzysztof-hepner-978RAXoXnH4-unsplash.jpg",
+            "availableUnits": 1,
+            "wifi": true,
+            "laundry": false
+        },
+        {
+            "id": 5,
+            "name": "Hopeful Apartment Group",
+            "city": "Oakland",
+            "state": "CA",
+            "photo": "https://angular.dev/assets/images/tutorials/common/r-architecture-JvQ0Q5IkeMM-unsplash.jpg",
+            "availableUnits": 2,
+            "wifi": true,
+            "laundry": true
+        },
+        {
+            "id": 6,
+            "name": "Seriously Safe Towns",
+            "city": "Oakland",
+            "state": "CA",
+            "photo": "https://angular.dev/assets/images/tutorials/common/phil-hearing-IYfp2Ixe9nM-unsplash.jpg",
+            "availableUnits": 5,
+            "wifi": true,
+            "laundry": true
+        },
+        {
+            "id": 7,
+            "name": "Hopeful Housing Solutions",
+            "city": "Oakland",
+            "state": "CA",
+            "photo": "https://angular.dev/assets/images/tutorials/common/r-architecture-GGupkreKwxA-unsplash.jpg",
+            "availableUnits": 2,
+            "wifi": true,
+            "laundry": true
+        },
+        {
+            "id": 8,
+            "name": "Seriously Safe Towns",
+            "city": "Oakland",
+            "state": "CA",
+            "photo": "https://angular.dev/assets/images/tutorials/common/saru-robert-9rP3mxf8qWI-unsplash.jpg",
+            "availableUnits": 10,
+            "wifi": false,
+            "laundry": false
+        },
+        {
+            "id": 9,
+            "name": "Capital Safe Towns",
+            "city": "Portland",
+            "state": "OR",
+            "photo": "https://angular.dev/assets/images/tutorials/common/webaliser-_TPTXZd9mOo-unsplash.jpg",
+            "availableUnits": 6,
+            "wifi": true,
+            "laundry": true
+        }
+    ],
+    "users" :[
+        {
+            "id": 0,
+            "name": "Rafael Nascimento",
+            "position": "Programador",
+            "city" :"São Paulo",
+            "state" : "SP",
+            "photo": "https://angular.dev/assets/images/tutorials/common/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+            "status": true,
+            "inserted_at" : "21/03/2024 16:07:45",
+            "updated_at" : "21/03/2024 16:07:45"
+        },
+        {
+            "id": 2,
+            "name": "Cecília Nascimento",
+            "position": "Programador",
+            "city" :"São Paulo",
+            "state" : "SP",
+            "photo": "https://angular.dev/assets/images/tutorials/common/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+            "status": true,
+            "inserted_at" : "21/10/2024 16:07:45",
+            "updated_at" : "21/10/2024 16:07:45"
+        },
+        {
+            "id": 3,
+            "name": "Reginaldo Amado",
+            "position": "Assistete de Produção",
+            "city" :"Recife",
+            "state" : "PE",
+            "photo": "https://angular.dev/assets/images/tutorials/common/bernard-hermant-CLKGGwIBTaY-unsplash.jpg",
+            "status": true,
+            "inserted_at" : "21/10/2024 16:07:45",
+            "updated_at" : "21/10/2024 16:07:45"
+        }
+    ],
+    "products" :[
+        {
+        "id": 1, 
+        "label" : "lanche_ultra",
+        "imageUrl": "img/products/imagem_ilustra_order_1.jpg", 
+        "title": "Lanches Ultra Mega: Um Delírio de Sabores e Texturas", 
+        "description": "É mais do que um simples lanche — é uma entidade sensorial que transcende o cotidiano. O Lanche Ultra Mega não se contenta em ser mastigado; ele exige ser experienciado. Cada camada é uma provocação, um manifesto calórico que flerta com o excesso e sussurra ao paladar promessas de prazer imediato.",
+        "price" : 18.90,
+        "fixedPrice" : false,
+        "subProductsItens" : [
+            {
+                "id": 12, 
+                "label" : "beirute_alpha",
+                "imageUrl": "img/products/imagem_ilustra_beirute.jpg", 
+                "title": "Beirute Alpha", 
+                "description": "Beirute Alpha é mais do que um simples lanche",
+                "price" : 29.90,
+                "fixedPrice" : true
+            },
+            {
+                "id": 123, 
+                "label" : "hotdog_burn",
+                "imageUrl": "img/products/imagem_ilustra_order_1.jpg", 
+                "title": "Hot Dog Burn", 
+                "description": "Hot Dog Burn é mais do que um simples lanche",
+                "price" : 35.90,
+                "fixedPrice" : true
+            },
+            {
+                "id": 142, 
+                "label" : "sanduiche_metro_2m",
+                "imageUrl": "img/products/imagem_ilustra_order_1.jpg", 
+                "title": "Sanduíche de Metro (2m)", 
+                "description": "Sanduíche de Metro (2m) é mais do que um simples lanche",
+                "price" : 18.90,
+                "fixedPrice" : true
+            }
+        ]
+    }, 
+    {
+        "id": 2, 
+        "label" : "salgados",
+        "imageUrl": "img/products/imagem_ilustra_order_2.jpg", 
+        "title": "Salgados e Doces Variados: Uma Dança de Contrastes e Desejos", 
+        "description": "Eles chegam em silêncio, espalhados sobre a mesa como uma constelação de vontades. Pequenos, delicados ou exageradamente cheios de si, os salgados e doces variados são mais do que alimentos — são fragmentos de festa, pedaços de memória, partículas de infância e prazer entrelaçados.",
+        "price" : 5.90,
+        "fixedPrice" : false,
+        "subProductsItens" : [
+            {
+                "id": 4646546, 
+                "label" : "coxinha_frango",
+                "imageUrl": "img/products/imagem_ilustra_beirute.jpg", 
+                "title": "Coxinha de Frango", 
+                "description": "Coxinha de Frango é mais do que um simples Salgado.",
+                "price" : 5.90,
+                "fixedPrice" : true
+            },
+            {
+                "id": 234234, 
+                "label" : "coxinha_frango_catupiry",
+                "imageUrl": "img/products/imagem_ilustra_beirute.jpg", 
+                "title": "Coxinha de Frango com Catupiry", 
+                "description": "Coxinha de Frango com Catupiry é mais do que um simples Salgado.",
+                "price" : 9.90,
+                "fixedPrice" : true
+            }
+        ]
+    }, 
+    {
+        "id": 3, 
+        "label" : "executivos",
+        "imageUrl": "img/products/imagem_ilustra_order_3.jpg", 
+        "title": "Pratos Executivos: O Ritmo Saboroso dos Dias Úteis", 
+        "description": "De segunda a sexta, no compasso apressado das horas úteis, surge um intervalo sagrado — o instante em que o tempo desacelera e o paladar toma as rédeas. São os Pratos Executivos, não apenas refeições, mas arquiteturas momentâneas de equilíbrio entre urgência e prazer. Eles não gritam por atenção, mas se impõem com a elegância de quem sabe seu valor: simples, completos, perfeitamente orquestrados.",
+        "price" : 9.99,
+        "fixedPrice" : true,
+        "subProductsItens" : [
+            {
+                "id": 4464, 
+                "label" : "strogonoff_frango",
+                "imageUrl": "img/products/imagem_ilustra_order_1.jpg", 
+                "title": "Strogonoff de Frango", 
+                "description": "Strogonoff de Frango é mais do que um simples Prato Executivo.",
+                "price" : 99.90,
+                "fixedPrice" : true
+            },
+            {
+                "id": 435, 
+                "label" : "strogonoff_carne",
+                "imageUrl": "img/products/imagem_ilustra_order_1.jpg", 
+                "title": "Strogonoff de Carne", 
+                "description": "Strogonoff de Carne é mais do que um simples Prato Executivo.",
+                "price" : 99.90,
+                "fixedPrice" : true
+            },
+            {
+                "id": 985, 
+                "label" : "costela_cozida",
+                "imageUrl": "img/products/imagem_ilustra_order_1.jpg", 
+                "title": "Costela Cozida", 
+                "description": "Costela Cozida é mais do que um simples Prato Executivo.",
+                "price" : 99.90,
+                "fixedPrice" : true
+            }
+        ]
+    }, 
+    {
+        "id": 4, 
+        "label" : "churros",
+        "imageUrl": "img/products/imagem_ilustra_order_4.jpg", 
+        "title": "Churros de Sabores Exóticos: Uma Viagem de Sabor em Cada Mordida", 
+        "description": "Muito além do tradicional doce de leite, os churros ganharam novas roupagens e se tornaram verdadeiras experiências gastronômicas. Bem-vindos ao universo dos churros de sabores exóticos, onde criatividade e ousadia se encontram para surpreender o paladar.",
+        "price" : 9.99,
+        "fixedPrice" : true,
+        "subProductsItens" : [
+            {
+                "id": 4646546, 
+                "label" : "coxinha_frango",
+                "imageUrl": "img/products/imagem_ilustra_beirute.jpg", 
+                "title": "Chocolate Nutella", 
+                "description": "Chocolate Nutella é mais do que um simples Churros.",
+                "price" : 9.99,
+                "fixedPrice" : true
+            },
+            {
+                "id": 234234, 
+                "label" : "coxinha_frango_catupiry",
+                "imageUrl": "img/products/imagem_ilustra_beirute.jpg", 
+                "title": "Doce de Leite", 
+                "description": "Doce de Leite é mais do que um simples Churros.",
+                "price" : 9.99,
+                "fixedPrice" : true
+            }
+        ]
+    }, 
+    {
+        "id": 5, 
+        "label" : "massas",
+        "imageUrl": "img/products/imagem_ilustra_order_5.jpg", 
+        "title": "Massas: O Conforto em Forma de Sabor", 
+        "description": "Feitas à base de farinha, ovos e muita paixão, as massas são a alma da culinária italiana, mas já ganharam o mundo com interpretações criativas e ingredientes locais. Molhos encorpados, toques aromáticos de ervas frescas, queijos maturados e até mesmo frutos do mar transformam qualquer refeição em um verdadeiro ritual de sabor.",
+        "price" : 9.99,
+        "fixedPrice" : false,
+        "subProductsItens" : [
+            {
+                "id": 4646546, 
+                "label" : "coxinha_frango",
+                "imageUrl": "img/products/imagem_ilustra_beirute.jpg", 
+                "title": "Espaguete Tradicional", 
+                "description": "Espaguete Tradicional é mais do que uma simples Massa.",
+                "price" : 5.90,
+                "fixedPrice" : true
+            },
+            {
+                "id": 234234, 
+                "label" : "coxinha_frango_catupiry",
+                "imageUrl": "img/products/imagem_ilustra_beirute.jpg", 
+                "title": "Lasanha de Beringela", 
+                "description": "Lasanha de Beringela é mais do que uma simples Massa.",
+                "price" : 9.90,
+                "fixedPrice" : true
+            },
+            {
+                "id": 234234, 
+                "label" : "coxinha_frango_catupiry",
+                "imageUrl": "img/products/imagem_ilustra_beirute.jpg", 
+                "title": "Lasanha de Carne com Vegetais", 
+                "description": "Lasanha de Carne com Vegetais é mais do que uma simples Massa.",
+                "price" : 9.90,
+                "fixedPrice" : true
+            }
+        ]
+    }, 
+    {
+        "id": 6, 
+        "label" : "frutos_do_mar",
+        "imageUrl": "img/products/imagem_ilustra_order_6.jpg", 
+        "title": "Frutos do Mar: Sabor que Vem do Oceano", 
+        "description": "Refinados, frescos e cheios de personalidade, os pratos à base de frutos do mar conquistam paladares pelo mundo com seu sabor marcante e textura única. Camarões suculentos, lulas macias, mexilhões, polvos e peixes nobres ganham vida em receitas que celebram o melhor que o mar pode oferecer.",
+        "price" : 9.99,
+        "fixedPrice" : false,
+        "subProductsItens" : [
+            {
+                "id": 4646546, 
+                "label" : "coxinha_frango",
+                "imageUrl": "img/products/imagem_ilustra_beirute.jpg", 
+                "title": "Camarão na Moranga", 
+                "description": "Camarão na Moranga é mais do que um simples Fruto do Mar.",
+                "price" : 5.90,
+                "fixedPrice" : true
+            },
+            {
+                "id": 234234, 
+                "label" : "coxinha_frango_catupiry",
+                "imageUrl": "img/products/imagem_ilustra_beirute.jpg", 
+                "title": "Lula Grelhada", 
+                "description": "Lula Grelhada é mais do que um simples Fruto do Mar.",
+                "price" : 9.90,
+                "fixedPrice" : true
+            },
+            {
+                "id": 234234, 
+                "label" : "coxinha_frango_catupiry",
+                "imageUrl": "img/products/imagem_ilustra_beirute.jpg", 
+                "title": "Polvo Gratinado com Batata Holandeza", 
+                "description": "Polvo Gratinado com Batata Holandeza é mais do que um simples Fruto do Mar.",
+                "price" : 9.90,
+                "fixedPrice" : true
+            },
+            {
+                "id": 234234, 
+                "label" : "coxinha_frango_catupiry",
+                "imageUrl": "img/products/imagem_ilustra_beirute.jpg", 
+                "title": "Caranguejo com Farofa", 
+                "description": "Caranguejo com Farofa é mais do que um simples Fruto do Mar.",
+                "price" : 9.90,
+                "fixedPrice" : true
+            }
+        ]
+    }, 
+    {
+        "id": 7, 
+        "label" : "vegana",
+        "imageUrl": "img/products/imagem_ilustra_order_7.jpg", 
+        "title": "Comida Vegana: Sabor, Consciência e Criatividade no Prato", 
+        "description": "Com base em vegetais, legumes, grãos, frutas, sementes e especiarias, a culinária vegana é rica, colorida e incrivelmente saborosa. De uma feijoada vegana bem temperada a hambúrgueres artesanais de grão-de-bico, passando por queijos vegetais, leites alternativos e sobremesas à base de castanhas, cada prato mostra que é possível comer bem sem abrir mão do sabor — e sem causar impacto ao meio ambiente.",
+        "price" : 9.99,
+        "fixedPrice" : false,
+        "subProductsItens" : [
+            {
+                "id": 4646546, 
+                "label" : "coxinha_frango",
+                "imageUrl": "img/products/imagem_ilustra_beirute.jpg", 
+                "title": "Frango Xadrez", 
+                "description": "Frango Xadrez é mais do que um simples Comida Vegana.",
+                "price" : 5.90,
+                "fixedPrice" : true
+            }
+        ]
+    }
+    ]
+}

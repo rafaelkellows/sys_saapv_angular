@@ -1,0 +1,20 @@
+
+tr:not(first-child) *:not(img){
+    color: #211f80; font-weight: 300; font-size: 14px;  padding: 10px 20px; background-color: #e4e4e425; vertical-align: top;
+    a{ 
+        width: 35px; height: 35px; background-color: #211f80; color: #ffffff; font-size: 10px;
+        display: inline-block; text-align: center; padding: 0 5px; margin: 0 5px 0 0; border-radius: 15%; line-height: 33px;
+    }
+    a:last-child{
+        background-color: #da4843;
+    }
+}
+tr:not(first-child):hover {
+    background-color: #7e434325;transition: all .3s; cursor: pointer;
+}
+.subitem{
+    display: none;
+}
+td a{
+    width: 15px; height: 15px; font-size: 0;
+}

@@ -1,0 +1,10 @@
+:host {
+  --content-padding: 10px 10px;
+}
+main{
+  max-width: 1140px; margin: 0 auto;
+}
+
+.content {
+  padding: var(--content-padding);
+}

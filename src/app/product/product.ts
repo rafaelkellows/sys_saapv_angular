@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProductInterface } from './product.interface';
 import { ProductService } from './product.service';
 import { ProductList } from './product.list';
+
 @Component({
   selector: 'app-product',
   imports: [CommonModule, ProductList],
@@ -11,7 +12,14 @@ import { ProductList } from './product.list';
       <h2>Produtos</h2>
       <p>Apresenta a listagem de todos os itens cadastrados no sistema. Nela, é possível visualizar detalhes como nome, categoria, preço, estoque e status. A interface permite adicionar, editar, remover ou desativar produtos, além de oferecer filtros e busca para facilitar o gerenciamento do catálogo.</p>
       <form>
-        <input type="text" placeholder="Filter by title" (keyup)="filterResultsProd(filter.value)" #filter />
+        <div class="radio-categories">
+          <p>Filter by: </p>
+          <input type="radio" name="cat" id="title" (click)="setCategoryPro('title')" checked /> 
+          <label for="title">Título</label>
+          <input type="radio" name="cat" id="desc" (click)="setCategoryPro('desc')" /> 
+          <label for="desc">Description</label>
+        </div>
+        <input type="text" placeholder="Buscar por..." (keyup)="filterResultsProd(filter.value)" #filter />
         <button class="primary" type="button" (click)="filterResultsProd(filter.value)">Buscar</button>
       </form>
 
@@ -24,10 +32,11 @@ import { ProductList } from './product.list';
           <td>Preço</td>
           <td>Administração</td>
         </tr>
-        <app-product-list
-          *ngFor="let prodItem of filteredProdList"
-          [productList]="prodItem"
-        ><tr></tr></app-product-list>
+        @for (item of filteredProdList; track item.id) {
+          <app-product-list *ngFor="let prodItem of filteredProdList" [productList]="prodItem"></app-product-list>
+        } @empty {
+          <tr><td colspan="6" style="text-align:center">Nenhum item encontrado</td></tr>
+        }
       </table>
     </section>
   `,
@@ -37,6 +46,8 @@ export class Product {
   prodList: ProductInterface[] = [];
   prodService: ProductService = inject(ProductService);
   filteredProdList: ProductInterface[] = [];
+  prodCategory = "title";
+  inputText = "";
 
   constructor() {
     this.prodService
@@ -47,12 +58,25 @@ export class Product {
       });
   }
   filterResultsProd(text: string) {
+    this.inputText = text;
     if (!text) {
       this.filteredProdList = this.prodList;
       return;
     }
-    this.filteredProdList = this.prodList.filter((productList) =>
-      productList?.title.toLowerCase().includes(text.toLowerCase()),
-    );
+    if (this.prodCategory == "title") {
+      this.filteredProdList = this.prodList.filter((productList) =>
+        productList?.title.toLowerCase().includes(text.toLowerCase()),
+      );
+    }else{
+      this.filteredProdList = this.prodList.filter((productList) =>
+        productList?.description.toLowerCase().includes(text.toLowerCase()),
+      );
+    }
+    console.log(this.inputText);
+
+  }
+  setCategoryPro(text: string) {
+    this.prodCategory = text;
+    this.filterResultsProd(this.inputText);
   }
 }

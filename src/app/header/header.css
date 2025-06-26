@@ -2,19 +2,28 @@
   --content-padding: 10px 20px 10px 10px;
 }
 header.brand-name{
-  display: block;
-  height: 60px;
-  padding: var(--content-padding);
+  display: block; width: 100%; left: 0; top: 0; box-sizing: border-box;
+  position: absolute;
+  height: 80px;
+  padding: 10px calc(50% - 500px);
   box-shadow: 0px 5px 25px var(--shadow-color);
   > a{
-    background: url('../assets/logoMarca.png') no-repeat center center; background-size: 60%; width: 100px; height: 60px; border: 1px solid #605ecc; border-radius: 15px; display: inline-block; vertical-align: middle;
-    img{ display: none;}
+    width: 80px; height: 50px; margin: 5px 0; border: 1px solid #605ecc; border-radius: 15px; display: inline-flex; vertical-align: middle; align-items: center; justify-content: center;
+    img{ height: 80%; }
   }
   a + *{
-    display: inline-flex; width: calc(100% - 102px); justify-content: space-between; align-items: center;
+    display: inline-flex; width: calc(100% - 82px); justify-content: space-between; align-items: center;
   }
 }
 
 .content {
   padding: var(--content-padding);
+}
+
+@media (max-width: 1000px) {
+ header.brand-name{
+  padding: 10px;
+  a + *{
+    display: none
+  }}
 }

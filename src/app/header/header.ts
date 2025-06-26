@@ -8,7 +8,7 @@ import { MenuNavigation } from '../menu-navigation/menu-navigation';
   template: `
     <header class="brand-name">
       <a href="/">
-        <img class="brand-logo" src="#" alt="logo" aria-hidden="true" />
+        <img class="brand-logo" src="/logoMarca.png" alt="logo" aria-hidden="true" />
       </a>
       <app-menu-navigation></app-menu-navigation>
     </header>     

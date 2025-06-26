@@ -13,7 +13,7 @@ import { ProductList } from './product.list';
       <p>Apresenta a listagem de todos os itens cadastrados no sistema. Nela, é possível visualizar detalhes como nome, categoria, preço, estoque e status. A interface permite adicionar, editar, remover ou desativar produtos, além de oferecer filtros e busca para facilitar o gerenciamento do catálogo.</p>
       <form>
         <div class="radio-categories">
-          <p>Filter by: </p>
+          <p>Filtrar por: </p>
           <input type="radio" name="cat" id="title" (click)="setCategoryPro('title')" checked /> 
           <label for="title">Título</label>
           <input type="radio" name="cat" id="desc" (click)="setCategoryPro('desc')" /> 
@@ -32,8 +32,10 @@ import { ProductList } from './product.list';
           <td>Preço</td>
           <td>Administração</td>
         </tr>
-        @for (item of filteredProdList; track item.id) {
-          <app-product-list *ngFor="let prodItem of filteredProdList" [productList]="prodItem"></app-product-list>
+        @for (item of filteredProdList; track item.id; let idx = $index) {
+          @if(idx <= 0){
+            <app-product-list *ngFor="let prodItem of filteredProdList" [productList]="prodItem"></app-product-list>
+          }
         } @empty {
           <tr><td colspan="6" style="text-align:center">Nenhum item encontrado</td></tr>
         }

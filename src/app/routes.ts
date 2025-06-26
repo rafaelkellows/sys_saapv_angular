@@ -12,42 +12,42 @@ const routeConfig: Routes = [
   {
     path: '',
     component: Dashboard,
-    title: 'Início | Dashboard',
+    title: 'SAAPV - Início | Dashboard',
   },
   {
     path: 'houses',
     component: Home,
-    title: 'Moradias',
+    title: 'SAAPV - Moradias',
   },
   {
     path: 'users',
     component: User,
-    title: 'Usuários',
+    title: 'SAAPV - Usuários',
   },
   {
     path: 'products',
     component: Product,
-    title: 'Produtos',
+    title: 'SAAPV - Produtos',
   },
   {
     path: 'products/details/:id',
     component: ProductDetails,
-    title: 'Detalhes do Produto',
+    title: 'SAAPV - Detalhes do Produto',
   },
   {
     path: 'orders',
     component: Order,
-    title: 'Pedidos',
+    title: 'SAAPV - Pedidos',
   },
   {
     path: 'configs',
     component: Config,
-    title: 'Configurações',
+    title: 'SAAPV - Configurações',
   },
   {
     path: 'details/:id',
     component: Details,
-    title: 'Detalhes',
+    title: 'SAAPV - Detalhes',
   },
 ];
 export default routeConfig;

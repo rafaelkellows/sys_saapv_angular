@@ -1,7 +1,7 @@
 
 .user-list{
     padding: 50px;
-    h2{ margin: 0 15px 10px; color: #605ecc; }
+    h2{ margin: 0 15px 30px; color: #605ecc; }
     p{ margin: 0 15px 50px; color: #211f80; font-weight: 300; line-height: 20px; }
     table{
         border: 1px solid #605ecc; border-radius: 15px; width: 100%; margin: 20px 10px;

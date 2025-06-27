@@ -1,5 +1,5 @@
 import { Component, inject, input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { ProductInterface } from './product.interface';
 import { ProductService } from './product.service';
 import { ProductList } from './product.list';
@@ -9,6 +9,7 @@ import { ProductList } from './product.list';
   imports: [CommonModule, ProductList],
   template: `
     <section class="product-list">
+      <button class="go-back" (click)="goBack()">Voltar</button>
       <h2>Produtos</h2>
       <p>Apresenta a listagem de todos os itens cadastrados no sistema. Nela, é possível visualizar detalhes como nome, categoria, preço, estoque e status. A interface permite adicionar, editar, remover ou desativar produtos, além de oferecer filtros e busca para facilitar o gerenciamento do catálogo.</p>
       <form>
@@ -51,7 +52,7 @@ export class Product {
   prodCategory = "title";
   inputText = "";
 
-  constructor() {
+  constructor(private location: Location) {
     this.prodService
       .getAllProducts()
       .then((prodList: ProductInterface[]) => {
@@ -80,5 +81,8 @@ export class Product {
   setCategoryPro(text: string) {
     this.prodCategory = text;
     this.filterResultsProd(this.inputText);
+  }
+  goBack(): void {
+    this.location.back();
   }
 }

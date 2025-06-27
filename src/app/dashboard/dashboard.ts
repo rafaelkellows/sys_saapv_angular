@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { CommonModule, Location } from '@angular/common';
+import { App } from '../app';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [],
+  imports: [CommonModule],
   template: `
     <section class="dashboard">
+      <button class="go-back" (click)="goBack()">Voltar</button>
+
       <h2>Dashboard</h2>
       <h3>Bem vindo!</h3>
       <p>O dashboard é uma interface visual que reúne e exibe dados em tempo real de forma clara e objetiva. Ele permite o acompanhamento de métricas importantes por meio de gráficos, tabelas e indicadores visuais.</p>
@@ -51,5 +55,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.css'],
 })
 export class Dashboard {
-
+  constructor(private location: Location) {  }
+  goBack(): void {
+    this.location.back();
+  }
+  
 }
+
+
+

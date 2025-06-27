@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, Location} from '@angular/common';
 import {ActivatedRoute} from '@angular/router';
 import { ProductService } from './product.service';
 import { ProductInterface } from './product.interface';
@@ -10,6 +10,9 @@ import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
   imports: [CommonModule, ReactiveFormsModule],
   template: `
   <section class="product-details">
+    
+    <button class="go-back" (click)="goBack()">Voltar</button>
+
     <h2 class="listing-heading">{{ housingLocation?.title }}</h2>
     <img
         class="product-details-photo"
@@ -41,7 +44,7 @@ export class ProductDetails {
     label: new FormControl(''),
     description: new FormControl(''),
   });
-  constructor() {
+  constructor(private location: Location) {
     const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
     this.housingService.getAllProductsById(housingLocationId).then((housingLocation) => {
       this.housingLocation = housingLocation;
@@ -54,5 +57,9 @@ export class ProductDetails {
       this.applyForm.value.label ?? '',
       this.applyForm.value.description ?? '',
     );
+  }
+  
+  goBack(): void {
+    this.location.back();
   }
 }

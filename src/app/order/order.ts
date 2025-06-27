@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule, Location } from '@angular/common';
 
 @Component({
   selector: 'app-order',
-  imports: [],
+  imports: [CommonModule],
   template: `
     <section class="order-list">
+      <button class="go-back" (click)="goBack()">Voltar</button>
       <h2>Pedidos</h2>
       <p>Exibe o histórico e o status de todas as solicitações realizadas no sistema. Cada pedido inclui informações como cliente, data, itens comprados, valor total e situação (em andamento, concluído, cancelado, etc.). A página permite acompanhar o andamento dos pedidos, realizar buscas, aplicar filtros e acessar detalhes individuais para gestão e atendimento eficiente.</p>
       <form>
@@ -65,5 +67,8 @@ import { Component } from '@angular/core';
 
 })
 export class Order {
-
+  constructor(private location: Location) {}
+  goBack(): void {
+    this.location.back();
+  }
 }

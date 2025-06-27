@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { UserInfos } from './user.interface';
 import { UserService } from './user.service';
 
@@ -8,6 +8,7 @@ import { UserService } from './user.service';
   imports: [CommonModule],
   template: `
     <section class="user-list">
+      <button class="go-back" (click)="goBack()">Voltar</button>
       <h2>Usuários</h2>
       <p>Exibe a lista de todos os usuários registrados no sistema. Nela, é possível visualizar informações básicas como nome, e-mail, perfil de acesso e status da conta. Também permite realizar ações administrativas, como adicionar, editar, desativar ou excluir usuários, além de aplicar filtros e buscas para facilitar a gestão.</p>
       <form>
@@ -52,7 +53,7 @@ export class User {
   userList: UserInfos[] = [];
   userService: UserService = inject(UserService);
   filteredLocationList: UserInfos[] = [];
-  constructor() {
+  constructor(private location: Location) {
     this.userService
       .getAllUserInfos()
       .then((userList: UserInfos[]) => {
@@ -60,4 +61,9 @@ export class User {
         this.filteredLocationList = userList;
       });
   }
+
+  goBack(): void {
+    this.location.back();
+  }
+
 }

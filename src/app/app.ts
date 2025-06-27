@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, Directive, input, QueryList, signal, ViewChildren } from '@angular/core';
+import { CommonModule, Location } from '@angular/common';
+
 import { Header } from './header/header';
 import { Dashboard } from './dashboard/dashboard';
 import { User } from './user/user';
@@ -10,7 +12,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Dashboard, User, Product, Order, Config, HousingLocation, RouterModule],
+  imports: [CommonModule, Header, Dashboard, User, Product, Order, Config, HousingLocation, RouterModule],
   template: `
     <main>
       <app-header></app-header>
@@ -21,4 +23,8 @@ import { RouterModule } from '@angular/router';
 })
 export class App {
   title = 'home';
+  constructor(private location: Location) {  }
+  goBack(): void {
+    this.location.back();
+  }
 }

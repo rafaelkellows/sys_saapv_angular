@@ -13,6 +13,16 @@ body {
   --accent-color: #e8e7fa;
   --shadow-color: #E8E8E8;
 }
+button.go-back{
+  padding: 10px 30px;
+  border: solid 1px var(--primary-color);
+  background: var(--primary-color);
+  color: white; float: right; margin: -3px 0 0;
+  border-radius: 15px; transition: all .3s; cursor: pointer;
+  &:hover{
+    background: #fd8a06; border-color: #fd8a06;
+  }
+}
 
 button.primary {
   padding: 10px;
@@ -21,3 +31,6 @@ button.primary {
   color: white;
   border-radius: 8px;
 }
+main section h2{ margin: 0 15px 30px !important; }
+main section > h3{ color: #2e2e2e !important; font-size: 18px !important;  }
+main section > p{ color: #2e2e2e !important; font-size: 14px !important;  line-height: 18px !important; padding-right: 120px; text-align: justify;}

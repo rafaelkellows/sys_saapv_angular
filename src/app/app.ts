@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, Directive, input, QueryList, signal, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, Directive, input, QueryList, signal, OnInit, ViewChild } from '@angular/core';
 import { CommonModule, Location } from '@angular/common';
-
+import { GoBackNavigation } from './go-back-navigation/go-back-navigation.component';
 import { Header } from './header/header';
 import { Dashboard } from './dashboard/dashboard';
 import { User } from './user/user';
@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, Header, Dashboard, User, Product, Order, Config, HousingLocation, RouterModule],
+  imports: [CommonModule, GoBackNavigation, Header, Dashboard, User, Product, Order, Config, HousingLocation, RouterModule],
   template: `
     <main>
       <app-header></app-header>
@@ -24,7 +24,18 @@ import { RouterModule } from '@angular/router';
 export class App {
   title = 'home';
   constructor(private location: Location) {  }
+
   goBack(): void {
     this.location.back();
+  }
+  
+
+}
+
+
+export class CustomListbox extends App {
+  other = this.title;
+  getInfos(): void {
+    console.log('Service logic executed.');
   }
 }

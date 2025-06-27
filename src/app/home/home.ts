@@ -1,15 +1,17 @@
 import {Component, inject} from '@angular/core';
-import { CommonModule, Location } from '@angular/common';
+import { CommonModule } from '@angular/common';
+import { GoBackNavigation } from '../go-back-navigation/go-back-navigation.component';
+
 import {HousingLocation} from '../housing-location/housing-location';
 import {HousingLocationInfo} from '../housinglocation';
 import {HousingService} from '../housing.service';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, HousingLocation],
+  imports: [CommonModule, GoBackNavigation, HousingLocation],
   template: `
     <section class="home">
-      <button class="go-back" (click)="goBack()">Voltar</button>
+      <go-back-navigation></go-back-navigation>
       <h2>Moradias</h2>
       <p>Apresenta a listagem de todos os itens cadastrados no sistema. Nela, é possível visualizar detalhes como nome, categoria, preço, estoque e status. A interface permite adicionar, editar, remover ou desativar produtos, além de oferecer filtros e busca para facilitar o gerenciamento do catálogo.</p>
       <form>
@@ -30,7 +32,7 @@ export class Home {
   housingLocationList: HousingLocationInfo[] = [];
   housingService: HousingService = inject(HousingService);
   filteredLocationList: HousingLocationInfo[] = [];
-  constructor(private location: Location) {
+  constructor() {
     this.housingService
       .getAllHousingLocations()
       .then((housingLocationList: HousingLocationInfo[]) => {
@@ -47,7 +49,5 @@ export class Home {
       housingLocation?.city.toLowerCase().includes(text.toLowerCase()),
     );
   }
-  goBack(): void {
-    this.location.back();
-  }
+  
 }

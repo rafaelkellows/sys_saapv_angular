@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import {CommonModule, Location} from '@angular/common';
+import { GoBackNavigation } from '../go-back-navigation/go-back-navigation.component';
 import {ActivatedRoute} from '@angular/router';
 import { ProductService } from './product.service';
 import { ProductInterface } from './product.interface';
@@ -7,11 +8,11 @@ import {FormControl, FormGroup, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-product-details',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, GoBackNavigation, ReactiveFormsModule],
   template: `
   <section class="product-details">
     
-    <button class="go-back" (click)="goBack()">Voltar</button>
+    <go-back-navigation></go-back-navigation>
 
     <h2 class="listing-heading">{{ housingLocation?.title }}</h2>
     <img

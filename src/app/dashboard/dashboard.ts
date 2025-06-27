@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { CommonModule, Location } from '@angular/common';
-import { App } from '../app';
+import { CommonModule } from '@angular/common';
+import { GoBackNavigation } from '../go-back-navigation/go-back-navigation.component';
+
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CommonModule],
+  imports: [CommonModule, GoBackNavigation],
   template: `
     <section class="dashboard">
-      <button class="go-back" (click)="goBack()">Voltar</button>
+      <go-back-navigation></go-back-navigation>
 
       <h2>Dashboard</h2>
       <h3>Bem vindo!</h3>
@@ -55,11 +56,16 @@ import { App } from '../app';
   styleUrls: ['./dashboard.css'],
 })
 export class Dashboard {
+  /*
   constructor(private location: Location) {  }
   goBack(): void {
     this.location.back();
   }
   
+  constructor(private myService: App) {
+    this.myService.getInfos();
+  }*/
+
 }
 
 
